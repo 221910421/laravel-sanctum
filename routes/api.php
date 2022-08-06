@@ -21,5 +21,5 @@ use App\Http\Controllers\AuthController;
 
 Route::apiResource('posts', PostController::class)->middleware('auth:sanctum');
 
-Route::get('/register', [AuthController::class, 'createUser']);
+Route::post('/register', [AuthController::class, 'createUser']);
 Route::post('/login', [AuthController::class, 'loginUser']);
